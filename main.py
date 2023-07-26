@@ -24,7 +24,7 @@ def days_between_dates(date1,date2):
 
 root=Tk()  # creating a tkinter window
 
-c=Canvas(root, width=800, height=800, bg='black')  # canvas of 800 by 800 created
+c=Canvas(root, width=1000, height=500, bg='black')  # canvas of 800 by 800 created
 
 c.pack()  # packs the canvas into tkinter window
 
@@ -33,11 +33,18 @@ c.create_text(100,50,anchor='w',fill='orange',font='Arial 28 bold underline', te
 events=get_events()
 today=date.today()
 vertical_space=100
+events.sort(key=lambda x:x[1])  # this sorts the list in order of days to go and not by the name of the events
+
 for event in events:
     event_name=event[0]
     days_untill=days_between_dates(event[1],today)
     display='It is %s days untill %s '%(days_untill,event_name)
-    c.create_text(100,vertical_space,anchor='w',fill='lightblue',font='Arial 28 bold ', text=display)  # this line adds text onto the c canvas
+    if (int(days_untill)<=7):
+        text_col='red'
+    else:
+        text_col='lightblue'
+
+    c.create_text(100,vertical_space,anchor='w',fill=text_col,font='Arial 28 bold ', text=display)  # this line adds text onto the c canvas
     vertical_space=vertical_space+50
 
 root.mainloop()
