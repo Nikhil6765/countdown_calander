@@ -37,7 +37,7 @@ for event in events:
     event_name=event[0]
     days_untill=days_between_dates(event[1],today)
     display='It is %s days untill %s '%(days_untill,event_name)
-    c.create_text(100,vertical_space,anchor='w',fill='lightblue',font='Arial 28 bold underline', text=display)  # this line adds text onto the c canvas
-    vertical_space=vertical_space+30
+    c.create_text(100,vertical_space,anchor='w',fill='lightblue',font='Arial 28 bold ', text=display)  # this line adds text onto the c canvas
+    vertical_space=vertical_space+50
 
 root.mainloop()
