@@ -32,12 +32,12 @@ c.create_text(100,50,anchor='w',fill='orange',font='Arial 28 bold underline', te
 
 events=get_events()
 today=date.today()
-
+vertical_space=100
 for event in events:
     event_name=event[0]
     days_untill=days_between_dates(event[1],today)
     display='It is %s days untill %s '%(days_untill,event_name)
-    c.create_text(100,100,anchor='w',fill='lightblue',font='Arial 28 bold underline', text=display)  # this line adds text onto the c canvas
-
+    c.create_text(100,vertical_space,anchor='w',fill='lightblue',font='Arial 28 bold underline', text=display)  # this line adds text onto the c canvas
+    vertical_space=vertical_space+30
 
 root.mainloop()
