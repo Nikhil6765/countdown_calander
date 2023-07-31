@@ -3,7 +3,7 @@ from datetime import date, datetime
 
 # getting data from events.txt file
 def get_events():
-    list_events=[]......
+    list_events=[]
     with open('events.txt') as file:  # this line opens the text file
         for line in file:
             line=line.rstrip('\n') # removes the new line character '\n' from each line
