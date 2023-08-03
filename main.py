@@ -1,7 +1,7 @@
 from tkinter import Tk, Canvas
 from datetime import date, datetime
 
-# getting data from events.txt file
+# getting data from events.txt file 
 def get_events():
     list_events=[]
     with open('events.txt') as file:  # this line opens the text file
