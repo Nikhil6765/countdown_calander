@@ -20,7 +20,7 @@ def days_between_dates(date1,date2):
     number_of_days=time_between.split(' ') # here the string is spltted at each blank space
     return number_of_days[0]
 
-# creating the canvas
+# creating the canvas 
 
 root=Tk()  # creating a tkinter window
 
